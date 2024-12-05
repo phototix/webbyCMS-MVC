@@ -7,7 +7,7 @@ require_once '../core/Autoload.php';
 Autoload::register();
 
 $config = require '../config/config.php';
-$db = new Database($config['db']);
+$db = Database::getInstance(); 
 
 $router = new Router();
 $router->addRoute('GET', '/', 'HomeController@index');
