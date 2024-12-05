@@ -3,7 +3,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 // /public/index.php
-require_once '../core/Autoload.php';
+require_once '../app/Autoload.php';
 Autoload::register();
 
 $config = require '../config/config.php';
