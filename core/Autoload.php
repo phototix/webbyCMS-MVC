@@ -7,6 +7,14 @@ class Autoload {
             if (file_exists($path)) {
                 require $path;
             }
+
+            $classPath = __DIR__ . '/app/Controllers/' . $class . '.php';
+            if (file_exists($classPath)) {
+                require_once $classPath;
+            } else {
+                die("Class file for {$class} not found at {$classPath}");
+            }
+
         });
     }
 }

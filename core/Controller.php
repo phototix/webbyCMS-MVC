@@ -3,7 +3,7 @@
 class Controller {
     protected function view($view, $data = []) {
         extract($data);
-        require __DIR__ . "/app/Controllers/" . $view . ".php";
+        require __DIR__ . "/app/Views/" . $view . ".php";
     }
 }
 
