@@ -8,7 +8,7 @@ class Autoload {
                 require $path;
             }
 
-            $classPath = __DIR__ . '/app/Controllers/' . $class . '.php';
+            $classPath = '/app/Controllers/' . $class . '.php';
             if (file_exists($classPath)) {
                 require_once $classPath;
             } else {
