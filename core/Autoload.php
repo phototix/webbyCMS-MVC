@@ -12,15 +12,12 @@ class Autoload {
 
             foreach ($paths as $path) {
                 $file = $path . $class . '.php';
-                echo $file;
                 if (file_exists($file)) {
                     require_once $file;
                     return;
                 }
             }
-
-            // Debugging output for missing classes
-            die("Class file for {$class} not found in registered paths.");
+            
         });
     }
 }
