@@ -4,10 +4,10 @@ class Autoload {
     public static function register() {
         spl_autoload_register(function ($class) {
             $paths = [
-                __DIR__ . '/core/',
-                __DIR__ . '/app/Controllers/',
-                __DIR__ . '/app/Models/',
-                __DIR__ . '/app/Views/',
+                '/core/',
+                '/app/Controllers/',
+                '/app/Models/',
+                '/app/Views/',
             ];
 
             foreach ($paths as $path) {
